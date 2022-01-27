@@ -67,4 +67,35 @@ function findingElement(arr, n, x){
     }
 }
 
-console.log(findingElement(arr, n, x));
+// console.log(findingElement(arr, n, x));
+
+
+
+/** single function code */
+function sortedRotaed(arr, x, start, end){
+    while(start <= end){
+        var mid = start + ((end - start)/2);
+    
+        if(arr[mid] == x){
+            return mid;
+        }
+        if(arr[start] <= arr[mid]){
+            if(arr[start] <= x && x < arr[mid]){
+                end = mid -1;
+            }
+            else{
+                start = mid +1;
+            }
+        }
+        else{
+            if(arr[mid] < x && x <= arr[end]){
+                start = mid+1
+            }
+            else{
+                end = mid-1
+            }
+        }
+    }
+    return -1;  
+}
+console.log(sortedRotaed(arr, x, start, end))

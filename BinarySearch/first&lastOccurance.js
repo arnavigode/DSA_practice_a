@@ -14,7 +14,7 @@ function firstoccurrence(arr, x, start, end, res) {
     if (x == arr[mid]) {
       res = mid;
       end = mid - 1;
-    //   console.log(arr[mid]);
+      //   console.log(arr[mid]);
     } else if (x < arr[mid]) {
       end = mid - 1;
     } else {
