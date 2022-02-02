@@ -1,17 +1,14 @@
-var hasCycle = function(head) {
-    var setLL = new Set();
-       while (head != null) {
-        
-           if (setLL.has(head)){
-               return true;
-           }
-           else{
-               setLL.add(head);
-           }
-            
+var hasCycle = function (head) {
+  var setLL = new Set();
+  while (head != null) {
+    if (setLL.has(head)) {
+      return true;
+    } else {
+      setLL.add(head);
+    }
 
-           head = head.next;
-       }
+    head = head.next;
+  }
 
-       return false;
+  return false;
 };
