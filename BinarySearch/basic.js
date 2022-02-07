@@ -1,7 +1,6 @@
 function basic(arr, x, start, end) {
   while (start <= end) {
     var mid = Math.floor((start + end) / 2);
-
     if (x == arr[mid]) {
       return mid;
     } else if (x < arr[mid]) {
@@ -20,4 +19,3 @@ var x = 10;
 var start = 0;
 var end = arr.length - 1;
 console.log(basic(arr, x, start, end));
-
