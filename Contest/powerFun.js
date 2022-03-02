@@ -18,7 +18,7 @@ function runProgram(input) {
     // console.log(power(n, m));
     arr.push(power(n, m));
   }
-    console.log(arr)
+    // console.log(arr)
   var count = 0;
   // var sum = 0;
   for (j = 0; j < arr.length - 1; j++) {

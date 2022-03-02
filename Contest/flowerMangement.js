@@ -7,25 +7,23 @@ function runProgram(input) {
         var arr = newInput[(a*2)].trim().split(" ").map(Number);
         // console.log(k)
         // console.log(arr)
-        var iseven = false
-        if(arr[0] == 1){
-                iseven = true;
-        }
-        var count = 0;
+        var count=0;
         for(var i =0; i < arr.length; i++){
-            if(iseven){
-                if(arr[i] == 0 && i %2 == 0 && arr[i+1] !== 1 && arr[i-1] !==1){
-                    count++;
-                }
-            }
-            else{
-                if(arr[i] == 0 && i %2 == 1 && arr[i+1] !== 1 && arr[i-1] !==1){
-                    count++;
-                }
-            }
+          if(i ==0 && arr[0] == 0 && arr[1] == 0){
+            arr[0] = 1;
+            count++;
+          }
+          else if(i == n-1 && arr[n-1] == 0 && arr[n-2] == 0){
+            arr[i] = 1;
+            count++;
+          }
+          else if(arr[i] == 0 && arr[i+1] == 0 && arr[i-1] == 0){
+            arr[i] = 1;
+            count++;
+          }
         }
         // console.log(count)
-        if(count == k){
+        if(count >= k){
             console.log("Yes")
         }
         else{
